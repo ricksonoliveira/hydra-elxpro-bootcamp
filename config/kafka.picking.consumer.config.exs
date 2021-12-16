@@ -2,7 +2,6 @@ use Mix.Config
 
 config :hydra, :picking_consumer,
   name: :picking_consumer,
-
   producer: [
     module: {BroadwayKafka.Producer, [
       hosts: [localhost: 9092],

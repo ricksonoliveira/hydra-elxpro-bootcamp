@@ -32,6 +32,7 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+import_config "poolboy.mongo.config.exs"
 import_config "kafka.picking.consumer.config.exs"
 
 # Import environment specific config. This must remain at the bottom
