@@ -24,8 +24,15 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+  config :hydra, :mongo_config,
+    name: :mongo,
+    url: "mongodb+srv://skywalker:skywalker@cluster0.iuwtb.mongodb.net/pickings",
+    pool_size: 2
+
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+import_config "kafka.picking.consumer.config.exs"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

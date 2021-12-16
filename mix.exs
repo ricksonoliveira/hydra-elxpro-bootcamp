@@ -58,7 +58,14 @@ defmodule Hydra.MixProject do
       {:absinthe_phoenix, "~> 2.0"},
       {:absinthe_error_payload, "~> 1.1"},
       {:mock, "~> 0.3.0", only: :test},
-      {:broadway_kafka, "~> 0.3.0"}
+
+      {:brod, "~> 3.15"},
+      {:broadway, "~> 1.0"},
+      {:broadway_kafka, "~> 0.3.0"},
+      {:mongodb_driver, "~> 0.7.4"},
+      {:poolboy, ">= 0.0.0"},
+
+
     ]
   end
 
