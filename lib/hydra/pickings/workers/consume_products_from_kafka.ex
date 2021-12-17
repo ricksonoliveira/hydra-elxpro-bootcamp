@@ -1,6 +1,7 @@
 defmodule Hydra.Pickings.Workers.ConsumeProductsFromKafka do
     use Broadway
     alias Broadway.Message
+    alias Hydra.Pickings
 
     def start_link(opts) do
       IO.inspect opts
